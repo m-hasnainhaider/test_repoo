@@ -7,7 +7,7 @@ export default function Home() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get(process.env.NEXT_PUBLIC_API_URL)
+    axios.get(`${process.env.NEXT_PUBLIC_API_URL}/users`)
       .then((response) => {
         setUsers(response.data);
       })
